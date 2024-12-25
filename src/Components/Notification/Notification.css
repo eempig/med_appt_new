@@ -1,0 +1,40 @@
+.appointment-card {
+  width: 100px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  padding: 15px;
+  position: fixed;
+  right: 10%;
+  top: 15%;
+  z-index: 1001; /* Ensure it's above other components, adjust if necessary */
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.appointment-card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.appointment-card__title {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.appointment-card__message {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.appointment-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Additional styles if required can go here */
